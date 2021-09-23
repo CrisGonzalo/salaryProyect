@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Contratos</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="esta es mi primera web"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c8dca0a9ee.js" crossorigin="anonymous"></script>
+    <style>    
+
+
+* {
+
+margin: 0;
+padding: 0;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+background-color: #F5EDED;
+justify-content: center;
+
+    }
+        
+.table {  
+
+background-color: white;  
+width: 100%;  
+
+}
+
+
+header {
+
+font-size: 20px;
+text-align: center;
+padding: 10px 10px;
+margin: 10px 10px;
+background-color:#D72323;
+color: #F5EDED;
+border-radius: 4px;
+box-shadow: 5px 3px 8px #000;
+}
+
+.menu { 
+background-color: rgb(209, 209, 209);
+text-align: center;
+font-weight: bold;
+
+}
+
+.menu li {
+list-style: none;
+padding: 5px;
+display: inline-block;
+         
+}
+
+.mes {
+
+    background-color: transparent;
+    padding-left: 0px;
+    color: black;
+    font-size: 20px;
+    font-style: oblique;
+    margin: 0px;
+    padding: 20px;
+    
+    
+}
+
+.filter{
+
+    align-items: flex-start;
+    padding: 0px 20px ;
+    margin: 0px;
+   
+}
+
+input{
+    
+    padding: 5px;
+    margin: 10px;
+    width: 100px;
+    font-size: 15px;
+    color: #F5EDED;
+    background-color: #000000;
+    border-radius:5px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  
+  .input:hover{
+    
+    padding: 5px;
+    margin: 10px;
+    width: 100px;
+    font-size: 15px;
+    color: #F5EDED;
+    background-color: #D72323;
+    border-radius:5px;
+    box-shadow:  5px 3px 8px #000;
+
+
+  }
+
+  .class {
+
+    background-color: white;
+    width: 250px;
+    color: black;
+    text-align: left;    
+
+  }
+
+footer{
+padding: 0px;
+margin: 0px;
+
+}
+    </style>
+</head> 
+
+ <header>Panel de contratos</header>
+
+<body>
+      
+<div class="mes">
+
+  <script type="text/javascript">
+    var mm=new Date();
+    var m2 = mm.getMonth() + 1;
+    var mesok = (m2 < 10) ? '0' + m2 : m2;
+    var mesok=new Array(12);
+    mesok[0]="ENERO";
+    mesok[1]="FEBRERO";
+    mesok[2]="MARZO";
+    mesok[3]="ABRIL";
+    mesok[4]="MAYO";
+    mesok[5]="JUNIO";
+    mesok[6]="JULIO";
+    mesok[7]="AGOSTO";
+    mesok[8]="SETIEMRBE";
+    mesok[9]="OCTUBRE";
+    mesok[10]="NOVIEMBRE";
+    mesok[11]="DICIEMBRE";
+    document.write("Mes: " + mesok[mm.getMonth()]);
+    </script>    
+
+</div>
+
+<fieldset><legend><h4>Filtro</h4></legend>
+<div class="filter">
+
+<form action="" method="post" target="_blank">
+    <td> Nombre  
+    <input class="class" type="search" name="busqueda" placeholder="Empleado">
+    <input class="input" type="submit" value="Buscar">
+    </td>
+   
+  <td class="class" style="width: 30px;">Categoria 
+        <select style="background-color:   white" name="menu" nombre="Categoria">  
+        <option value="0">...</option>
+        <option value="1">Oficial</option>
+        <option value="2">Albañil</option>
+        <option value="3">Maquinista</option>
+        <option value="4">Administrativo/a</option>
+        <option value="5">Vendedor/a</option>
+        <option value="6">Programador/a</option>
+        <option value="7">Auxiliar</option>
+      </select>
+  </td>
+    <input class="input"  type="submit" value="Buscar">
+
+    <td class="class" style="width: 30px;"> Mes
+      <select style="background-color: white" name="menu" nombre="mes">  
+      <option value="0">...</option>
+      <option value="1">Enero</option>
+      <option value="2">Febrero</option>
+      <option value="3">Marzo</option>
+      <option value="4">Abril</option>
+      <option value="5">Mayo</option>
+      <option value="6">Junio</option>
+      <option value="7">Julio</option>
+      <option value="8">Agosto</option>
+      <option value="9">Setiembre</option>
+      <option value="10">Octubre</option>
+      <option value="11">Novimebre</option>
+      <option value="12">Diciembre</option>
+    </select>
+  </td>  
+    <input class="input" type="submit" value="Buscar">
+</form>
+</div>
+
+
+
+</fieldset>
+<div>
+<p> 
+   <br> 
+  <div> 
+      <a href="file:///Users/user/senpai/paginas/nuevoempleado.html"><input class="input" type="button" value="Nuevo"></a>
+      <a href=""><input class="input" type="submit" value="Guardar"></a>
+      <a href=""><input class="input" type="reset" value="Borrar"></a>
+      
+    </div>
+</div>
+</p>
+<br>
+
+<form action="carga empleados" method="get">
+<table id="table">  
+<div>
+    <thead>  
+      <tr align="center">  
+        <th>Nombre</th>  
+        <th>Apellido</th>  
+        <th>Cédula</th> 
+        <th>Teléfono</th>
+        <th>Categoria</th>
+        
+        
+    </tr>
+    </thead>
+</div>  
+
+
+<div class="">
+    <form action="" class="form">
+    <tr style="width:50%">  
+    <p>
+        <td><input class= "class" type="text" nombre="Categoria" placeholder="Nombre del empleado"  size="30"> </td> 
+    </p> 
+    <p>
+        <td><input class= "class" type="text" nombre="Apellido" placeholder="Apellido" size="30"> </td> 
+    </p> 
+    <p>
+        <td><input class= "class" type="text" nombre="Cèdula" placeholder="Número Documento" size="30"> </td> 
+    </p> 
+    <p>
+        <td><input class= "class" type="text" nombre="Teléfono" placeholder="Teléfono" size="30"> </td> 
+    </p> 
+    <p> 
+        <td><select style="background-color: white; width: 180px;" name="menu" nombre="Categoria">  
+            <option value="0">...</option>
+            <option value="1">Oficial</option>
+            <option value="2">Albañil</option>
+            <option value="3">Maquinista</option>
+          </select>
+       
+          <input class="input" type="button" value="ver" style="right: auto; width: max-content;">
+        </td>    
+    </p>
+    </tr>  
+    
+    
+    <form action="" class="form">
+    <tr style="width:30%"> 
+    
+      <p>
+          <td><input class= "class" type="text" nombre="Categoria" placeholder="Nombre del empleado"  size="30"> </td> 
+      </p> 
+      <p>
+          <td><input class= "class"  type="text" nombre="Apellido" placeholder="Apellido" size="30"> </td> 
+      </p> 
+      <p>
+          <td><input class= "class" type="text" nombre="Cèdula" placeholder="Número Documento" size="30"> </td> 
+      </p> 
+      <p>
+          <td><input class= "class"  type="text" nombre="Teléfono" placeholder="Teléfono" size="30"> </td> 
+      </p> 
+      <p> 
+        <td><select style="background-color: white; width: 180px;" name="menu" nombre="Categoria">  
+            <option value="0">...</option>
+            <option value="1">Oficial</option>
+            <option value="2">Albañil</option>
+            <option value="3">Maquinista</option>
+          </select>
+       
+          <input class="input" type="button" value="ver" style="right: auto; width: max-content;">
+        </td>    
+    </p>
+      </tr>
+
+      <tr style="width:50%">  
+        <p>
+            <td><input class= "class" type="text" nombre="Categoria" placeholder="Nombre del empleado"  size="30"> </td> 
+        </p> 
+        <p>
+            <td><input class= "class" type="text" nombre="Apellido" placeholder="Apellido" size="30"> </td> 
+        </p> 
+        <p>
+            <td><input class= "class" type="text" nombre="Cèdula" placeholder="Número Documento" size="30"> </td> 
+        </p> 
+        <p>
+            <td><input class= "class" type="text" nombre="Teléfono" placeholder="Teléfono" size="30"> </td> 
+        </p> 
+        <p> 
+            <td><select style="background-color: white; width: 180px;" name="menu" nombre="Categoria">  
+                <option value="0">...</option>
+                <option value="1">Oficial</option>
+                <option value="2">Albañil</option>
+                <option value="3">Maquinista</option>
+              </select>
+           
+              <input class="input" type="button" value="ver" style="right: auto; width: max-content;">
+            </td>    
+        </p>
+        </tr>
+
+        <tr style="width:50%">  
+          <p>
+              <td><input class= "class" type="text" nombre="Categoria" placeholder="Nombre del empleado"  size="30"> </td> 
+          </p> 
+          <p>
+              <td><input class= "class" type="text" nombre="Apellido" placeholder="Apellido" size="30"> </td> 
+          </p> 
+          <p>
+              <td><input class= "class" type="text" nombre="Cèdula" placeholder="Número Documento" size="30"> </td> 
+          </p> 
+          <p>
+              <td><input class= "class" type="text" nombre="Teléfono" placeholder="Teléfono" size="30"> </td> 
+          </p> 
+          <p> 
+            <td><select style="background-color: white; width: 180px;" name="menu" nombre="Categoria">  
+                <option value="0">...</option>
+                <option value="1">Oficial</option>
+                <option value="2">Albañil</option>
+                <option value="3">Maquinista</option>
+              </select>
+           
+              <input class="input" type="button" value="ver" style="right: auto; width: max-content;">
+            </td>    
+        </p>
+          </tr>
+
+          <tr style="width:50%">  
+            <p>
+                <td><input class= "class" type="text" nombre="Categoria" placeholder="Nombre del empleado"  size="30"> </td> 
+            </p> 
+            <p>
+                <td><input class= "class" type="text" nombre="Apellido" placeholder="Apellido" size="30"> </td> 
+            </p> 
+            <p>
+                <td><input class= "class" type="text" nombre="Cèdula" placeholder="Número Documento" size="30"> </td> 
+            </p> 
+            <p>
+                <td><input class= "class" type="text" nombre="Teléfono" placeholder="Teléfono" size="30"> </td> 
+            </p>
+            <p> 
+                <td><select style="background-color: white; width: 180px; align-self: start;" name="menu" nombre="Categoria">  
+                    <option value="0">...</option>
+                    <option value="1">Oficial</option>
+                    <option value="2">Albañil</option>
+                    <option value="3">Maquinista</option>
+                  </select>
+               
+                  <input class="input" type="button" value="ver" style="right: auto; width: max-content;">
+                </td>    
+            </p>
+            </tr>
+
+            <tr style="width:50%">  
+              <p>
+                  <td><input class= "class" type="text" nombre="Categoria" placeholder="Nombre del empleado"  size="30"> </td> 
+              </p> 
+              <p>
+                  <td><input class= "class" type="text" nombre="Apellido" placeholder="Apellido" size="30"> </td> 
+              </p> 
+              <p>
+                  <td><input class= "class" type="text" nombre="Cèdula" placeholder="Número Documento" size="30"> </td> 
+              </p> 
+              <p>
+                  <td><input class= "class" type="text" nombre="Teléfono" placeholder="Teléfono" size="30"> </td> 
+              </p> 
+              <p> 
+                <td><select style="background-color: white; width: 180px;" name="menu" nombre="Categoria">  
+                    <option value="0">...</option>
+                    <option value="1">Oficial</option>
+                    <option value="2">Albañil</option>
+                    <option value="3">Maquinista</option>
+                  </select>
+               
+                  <input class="input" type="button" value="ver" style="right: auto; width: max-content;">
+                </td>    
+            </p>
+            </tr>
+
+           <div>
+            </body>
+            </html>
+
+        
