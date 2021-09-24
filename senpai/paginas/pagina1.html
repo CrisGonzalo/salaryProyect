@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel</title>
+  <script src="https://kit.fontawesome.com/c8dca0a9ee.js" crossorigin="anonymous"></script>
+  
+<style>
+  
+  * {
+
+margin: 0;
+padding: 0;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+background-color: #F5EDED;
+justify-content: center;
+  
+}
+
+#search{
+
+margin: 15px;
+padding: auto;
+
+}
+
+.container{
+
+display: grid;
+grid-template-columns: repeat(6,1fr); 
+grid-template-rows: 6fr ;
+margin: 10px;
+padding: 10px;
+content: 10px;
+
+}
+
+.class{
+
+background-color: white;
+margin: 10px;
+width: 250px;
+color: black;
+text-align: left; 
+border-radius: 5px;
+}
+
+header {
+
+font-size: 20px;
+text-align: center;
+padding: 10px 10px;
+margin: 10px 10px;
+background-color:#D72323;
+color: #F5EDED;
+border-radius: 4px;
+box-shadow: 5px 3px 8px #000;
+}
+
+
+#folder{
+
+    width: 12vw;
+    font-size: 15px;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 0px;
+    background-color:#000000;
+    pointer-events: painted;
+    color: #F5EDED;
+    border-radius: 4px;
+    transition-duration: 300ms ;
+    transition-timing-function:ease-out;
+    
+    
+  }
+
+
+#folder:hover {
+
+  background-color: #D72323;
+  color: #FFFFFF;
+  box-shadow: 5px 3px 8px #000;
+  border: outset;
+
+}
+
+input{
+    
+    padding: 5px;
+    margin: 20px;
+    width: 100px;
+    font-size: 15px;
+    color: #F5EDED;
+    background-color: #000000;
+    border-radius:5px;
+    text-align: center;
+    
+  }
+
+  
+  .input:hover{
+    
+    padding: 5px;
+    margin: 20px;
+    width: 100px;
+    font-size: 15px;
+    color: #F5EDED;
+    background-color: #D72323;
+    border-radius:5px;
+    box-shadow: 5px 3px 8px #000;
+
+  }
+
+
+footer{
+padding: 0px;
+margin: 0px;
+
+}
+ 
+
+</style>
+
+</head>
+
+
+<body>
+
+  <header> Gestión de empresas </header>
+     <br>
+     <br>
+
+<div> 
+
+  <div id="search">
+    <td >Nombre<input class="class" type="search" name="busqueda" placeholder="Buscar empresa">
+     <input class="input" type="submit" value="Buscar">
+    </td>
+  </div>
+      <a href="file:///Users/user/Desktop/senpai/paginas/nuevaempresa.html"><input class="input" type="button" value="Crear"></a>
+      <a href=""><input class="input" type="button" value="Modificar"></a>
+      <a href=""><input class="input" type="button" value="Guardar"></a>
+      <a href=""><input class="input" type="reset" value="Borrar"></a>
+      
+</div>     
+<div class="container">
+    <div>
+    <a href="file:///Users/user/Desktop/senpai/paginas/Panelempresas.html"><input type="button" id="folder" value="EMPRESA 1"></a>
+    </div>
+    <div>
+    <a href=""><input type="button" id="folder" value="EMPRESA 2"></a>
+    </div>
+    <div>
+    <a href=""><input type="button" id="folder" value="EMPRESA 3"></a>
+    </div>
+    <div>
+    <a href=""><input type="button" id="folder" value="EMPRESA 4"></a>
+    </div>
+    <div>
+    <a href=""><input type="button" id="folder" value="EMPRESA 5"></a>
+    </div>
+    <div>
+    <a href=""><input type="button" id="folder" value="EMPRESA 6"></a>
+    </div>
+</div>   
+ 
+</body>
+</html>
+

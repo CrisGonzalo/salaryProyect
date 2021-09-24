@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+      <meta charset="utf8"/>
+      <title>Liquidación</title>
+      <meta name="description" content="esta es mi primera web"/>
+      <meta name="author" content="GONZA">
+      <meta name="keywords" content="jornales, liquidacion, horas,"/>
+      <script src="https://kit.fontawesome.com/c8dca0a9ee.js" crossorigin="anonymous"></script>
+ <style>
+
+* {
+margin: 0;
+padding: 0;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+background-color: #F5EDED;
+justify-content: center;
+
+
+}
+
+header {
+
+font-size: 20px;
+text-align: center;
+padding: 10px 10px;
+margin: 10px 10px;
+background-color:#D72323;
+color: #F5EDED;
+border-radius: 4px;
+box-shadow: 5px 3px 8px #000;
+}
+
+body {
+
+margin-left: 5px;
+margin-right: 10px;
+margin-top: 5px;
+margin-bottom: 10px;
+
+}
+
+
+input{
+    
+    padding: 5px;
+    margin: 10px;
+    width: 100px;
+    font-size: 15px;
+    color: #F5EDED;
+    background-color: #000000;
+    border-radius:5px;
+    text-align: center;
+    cursor: pointer;
+    
+  }
+
+
+  .input:hover{
+    
+    padding: 5px;
+    margin: 10px;
+    width: 100px;
+    font-size: 15px;
+    color: #F5EDED;
+    background-color: #D72323;
+    border-radius:5px;
+    box-shadow:  5px 3px 8px #000;
+
+  }
+
+fieldset{
+
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 100%; 
+   
+}
+
+.form {
+
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px 10px 10px 10px;
+    align-items: center;
+    padding: 10px;
+    height: auto;
+    width: 150vh;
+    display: none ;
+    position: absolute; 
+    left: 100px;
+    align-content: space-between;
+ 
+
+}
+
+
+.class {
+
+background-color: white;
+width: 150px;
+color: black;
+text-align: left; 
+border-radius: 5px;
+
+
+}
+
+#tr{
+
+
+background-color: #000000; 
+height: 50px; 
+width: 150px; 
+cursor: pointer;
+
+}
+#tr:hover{
+
+background: #D72323;
+box-shadow:  5px 3px 8px #000;
+border: ridge;
+transition-duration: 300ms ;
+transition-timing-function:ease-out;
+
+
+}
+
+#cerrar{
+
+    right: 0%;
+    
+}
+
+
+
+#num {
+
+width: 200px;
+margin: 30px;
+background-color: #F5EDED;
+
+
+}
+
+.pay {
+
+    width: 80px;
+    margin: 10px;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    align-content: center;
+}
+
+.concept{
+
+    width: 180px;
+    margin: 10px;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    align-content: center;
+
+}
+
+select{
+
+    width: 150px;
+}
+
+.horas {
+
+width: 150px;
+color: black;
+
+}
+
+
+ </style>
+</head> 
+<body>
+    <header>Liquidaciones</header>
+    <br>
+<div>
+    <div>
+       <th>
+        FECHA: 
+        <input class="class" type="date" style="background-color:white">
+        <div> 
+            <a href=""><input class="input" type="button" value="Crear"></a>
+            <a href=""><input class="input" type="button" value="Modificar"></a>
+            <a href=""><input class="input" type="button" value="Guardar"></a>
+            <a href=""><input class="input" type="reset" value="Borrar"></a>
+      </div>      
+      <fieldset>
+            <legend>Datos Basicos</legend>
+          <center>
+            <td> Nombre 
+            <select id="Date" style="background-color: white" name="menu" nombre="Empleado">  
+                <option value="0">...</option>
+                <option value="1">Cristian Gonzalez</option>
+                <option value="2">Fernando Gutierrez</option>
+                <option value="3">Pablo Lopez</option>
+                <option value="4">Federico Perez</option>
+              </select>
+
+           </td>
+           
+          <td>Categoria
+              <select style="background-color:   white" name="menu" nombre="Categoria">  
+              <option value="0">...</option>
+              <option value="1">Oficial</option>
+              <option value="2">Albañil</option>
+              <option value="3">Maquinista</option>
+              <option value="4">Administrativo/a</option>
+              <option value="5">Vendedor/a</option>
+              <option value="6">Programador/a</option>
+              <option value="7">Auxiliar</option>
+            </select>
+        </td>
+        <td class="class"> Mes
+            <select style="background-color: white" name="menu" nombre="mes">  
+            <option value="0">...</option>
+            <option value="1">Enero</option>
+            <option value="2">Febrero</option>
+            <option value="3">Marzo</option>
+            <option value="4">Abril</option>
+            <option value="5">Mayo</option>
+            <option value="6">Junio</option>
+            <option value="7">Julio</option>
+            <option value="8">Agosto</option>
+            <option value="9">Setiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Novimebre</option>
+            <option value="12">Diciembre</option>
+          </select>
+        </td>
+        Valor Sueldo<input class="class" style="width: 100px;" type="number" min="0" id="multiplicando1" placeholder="Sueldo" value="0">  
+        <td> Moneda
+            <select id="Date" style= "width: 60px; background-color: white" name="menu" nombre="Empleado">  
+                <option value="0">...</option>
+                <option value="1">$</option>
+                <option value="2">USD</option>
+                <option value="3">EU</option>
+              </select>
+
+           </td>   
+        </fieldset>
+    </div>
+       </center>
+    </Fieldset>
+        <br>
+        <center>
+        <p style="font-size: medium;">
+        <a href="javascript:abrir()"><input type="button" name="Mensualidad" value="Mensualidad" id="tr"></a>
+        <a href="javascript:abrir2()"><input type="button" name="Licencia" value="Licencia" id="tr"></a>
+        <a href="javascript:abrir3()"><input type="button" name="1ra Quincena Liquidada" value="Quincena" id="tr"></a>
+        <a href="javascript:abrir4()"><input type="button" name="2da Quincena Liquidada" value="2da Quincena" id="tr"></a>
+        <a href="javascript:abrir5()"><input type="button" name="Aguinaldo" value="Aguinaldo" id="tr";></a>
+        <a href="javascript:abrir6()"><input type="button" name="Reliquidaciones" value="Reliquidaciones" id="tr"></a></p>
+        </center>
+        <br>
+
+<center>
+<fieldset class="form" id="vent1" style="box-shadow: 5px 3px 8px ;">
+
+<br>
+<H2>Mensualidad</H2><div id="cerrar1"><a href="javascript:cerrar1()"> <i class="far fa-times-circle" style="color: black; top: 3px;margin-left:90%; font-size: 30px;" ></i></a></div>
+
+<div style="text-align: left;">
+<input class="pay" type="text" value="Código" style="background-color: #AAAAAA;"readonly>
+<input class="pay" type="text" value="Cantidad" style="background-color: #AAAAAA;"readonly>
+<input class="concept" type="text" value="Concepto" style="background-color: #AAAAAA;"readonly>
+<input class="pay" type="text" value="Valor" style="background-color: #AAAAAA;"readonly>
+<input class="pay" type="text" value="Total" style="background-color: #AAAAAA;"readonly>
+<input class="concept" type="text" value="Total HABERES" style="background-color: #AAAAAA;"readonly>
+
+<form >
+
+        <p>
+            <select class="pay" style="width: 95px;">  
+            <option value="0">...</option>
+            <option value="1">SB</option>
+            <option value="2">HC</option>
+            <option value="3">HE</option>
+            <option value="4">PRES</option>
+            
+            
+          </select> 
+         
+            <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="multiplicador2" onchange="multiplicar();">
+            
+                <select class="concept" style="width: 190px;">
+                <option value="0">...</option>
+                <option value="1">Sueldo Basico</option>
+                <option value="2">Horas Comunes</option>
+                <option value="3">Horas Extra</option>
+                <option value="4">Presentismo</option>
+               
+                
+            </select>
+            
+            <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+            <input class="pay" type="number" min="0" value="0" style="background: white" id="resultado"> 
+            <input class="concept" type="number" min="0" value="0" style="background: white" id="resultado"> 
+            <input class="input" type="button" value="CALCULAR">    
+          
+        </p>
+        <p>
+            <select class="pay" style="width: 95px;">  
+                <option value="0">...</option>
+                <option value="1">SB</option>
+                <option value="2">HC</option>
+                <option value="3">HE</option>
+                <option value="4">PRES</option>
+                
+                
+              </select> 
+             
+                <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                
+                    <select class="concept" style="width: 190px;">
+                    <option value="0">...</option>
+                    <option value="1">Sueldo Basico</option>
+                    <option value="2">Horas Comunes</option>
+                    <option value="3">Horas Extra</option>
+                    <option value="4">Presentismo</option>
+                    
+                     
+                  </select>
+                
+                <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                <input class="input" type="button" value="CALCULAR">  
+                </select>
+            </p>
+            <p>
+                <select class="pay" style="width: 95px;">  
+                    <option value="0">...</option>
+                    <option value="1">SB</option>
+                    <option value="2">HC</option>
+                    <option value="3">HE</option>
+                    <option value="4">PRES</option>
+                    
+                    
+                  </select> 
+                 
+                    <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                    
+                        <select class="concept" style="width: 190px;">
+                        <option value="0">...</option>
+                        <option value="1">Sueldo Basico</option>
+                        <option value="2">Horas Comunes</option>
+                        <option value="3">Horas Extra</option>
+                        <option value="4">Presentismo</option>
+                        
+                        
+                      </select>
+                    
+                    <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                    <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                    <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                    <input class="input" type="button" value="CALCULAR">  
+                    </select>
+                </p>
+       
+                <p>
+                    <select class="pay" style="width: 95px;">  
+                        <option value="0">...</option>
+                        <option value="1">SB</option>
+                        <option value="2">HC</option>
+                        <option value="3">HE</option>
+                        <option value="4">PRES</option>
+                        
+                        
+                      </select> 
+                     
+                        <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                        
+                            <select class="concept" style="width: 190px;">
+                            <option value="0">...</option>
+                            <option value="1">Sueldo Basico</option>
+                            <option value="2">Horas Comunes</option>
+                            <option value="3">Horas Extra</option>
+                            <option value="4">Presentismo</option>
+                            
+                              
+                          </select>
+                        
+                        <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                        <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                        <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                        <input class="input" type="button" value="CALCULAR">  
+                        </select>
+                    </p>
+                    <p>
+                        <select class="pay" style="width: 95px;">  
+                            <option value="0">...</option>
+                            <option value="1">SB</option>
+                            <option value="2">HC</option>
+                            <option value="3">HE</option>
+                            <option value="4">PRES</option>
+                            
+                            
+                          </select> 
+                         
+                            <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                            
+                                <select class="concept" style="width: 190px;">
+                                <option value="0">...</option>
+                                <option value="1">Sueldo Basico</option>
+                                <option value="2">Horas Comunes</option>
+                                <option value="3">Horas Extra</option>
+                                <option value="4">Presentismo</option>
+                                
+                                 
+                                 
+                              </select>
+                            
+                            <input class="pay" type="number" min="0" value="0" style="background: white" id="resultado"> 
+                            <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                            <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                            <input class="input" type="button" value="CALCULAR">  
+                            </select>
+                        </p>
+       
+            </div>
+   
+</fieldset>
+</center>
+<center>
+<fieldset class="form" id="vent2" style="box-shadow: 5px 3px 8px ;">
+
+    <br>
+    <H2>Licencia</H2><div id="Cerrar2"><a href="javascript:cerrar2()"> <i class="far fa-times-circle" style="color: black; top: 3px;margin-left:90%; font-size: 30px;" ></i></a></div>
+    
+    <div style="text-align: left;">
+    <input class="pay" type="text" value="Código" style="background-color: #AAAAAA;"readonly>
+    <input class="pay" type="text" value="Cantidad" style="background-color: #AAAAAA;"readonly>
+    <input class="concept" type="text" value="Concepto" style="background-color: #AAAAAA;"readonly>
+    <input class="pay" type="text" value="Valor" style="background-color: #AAAAAA;"readonly>
+    <input class="pay" type="text" value="Total" style="background-color: #AAAAAA;"readonly>
+    <input class="concept" type="text" value="Total HABERES" style="background-color: #AAAAAA;"readonly>
+    
+    <form>
+    
+            <p>
+                <select class="pay" style= "width: 95px;">  
+                <option value="0">...</option>
+                <option value="1">LIC</option>
+                
+              </select> 
+             
+                <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="multiplicador2" onchange="multiplicar();">
+                
+                    <select class="concept" style="width: 190px;">
+                    <option value="0">...</option>
+                    <option value="1">Licencia</option>
+                    
+                  </select>
+                
+                <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                <input class="pay" type="number" min="0" value="0" style="background: white" id="resultado"> 
+                <input class="concept" type="number" min="0" value="0" style="background: white" id="resultado"> 
+                <input class="input" type="button" value="CALCULAR">    
+            </select>
+            </p>
+            <p>
+                <select class="pay" style="width: 95px;">  
+                    <option value="0">...</option>
+                    <option value="1">AP</option>
+                    <option value="2">IR</option>
+                    <option value="3">SG</option>
+                   
+                    
+                  </select> 
+                 
+                    <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                    
+                        <select class="concept" style="width: 190px;">
+                        <option value="0">...</option>
+                        <option value="1">Aporte Jubilatorio</option>
+                        <option value="2">IRPF</option>
+                        <option value="3">SiInSa</option>
+                    
+                         
+                      </select>
+                    
+                    <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                    <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                    <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                    <input class="input" type="button" value="CALCULAR">  
+                    </select>
+                </p>
+                <p>
+                    <select class="pay" style="width: 95px;">  
+                        <option value="0">...</option>
+                        <option value="1">SB</option>
+                        <option value="2">HC</option>
+                        <option value="3">HE</option>
+                        <option value="4">PRES</option>
+                        
+                        
+                      </select> 
+                     
+                        <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                        
+                            <select class="concept" style="width: 190px;">
+                            <option value="0">...</option>
+                            <option value="1">Sueldo Basico</option>
+                            <option value="2">Horas Comunes</option>
+                            <option value="3">Horas Extra</option>
+                            <option value="4">Presentismo</option>
+                            <option value="5">Licencia</option>
+                            
+                          </select>
+                        
+                        <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                        <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                        <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                        <input class="input" type="button" value="CALCULAR">  
+                        </select>
+                    </p>
+           
+                    <p>
+                        <select class="pay" style="width: 95px;">  
+                            <option value="0">...</option>
+                            <option value="1">SB</option>
+                            <option value="2">HC</option>
+                            <option value="3">HE</option>
+                            <option value="4">PRES</option>
+                            
+                            
+                          </select> 
+                         
+                            <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                            
+                                <select class="concept" style="width: 190px;">
+                                <option value="0">...</option>
+                                <option value="1">Sueldo Basico</option>
+                                <option value="2">Horas Comunes</option>
+                                <option value="3">Horas Extra</option>
+                                <option value="4">Presentismo</option>
+                                <option value="5">Licencia</option>
+                                  
+                              </select>
+                            
+                            <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                            <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                            <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                            <input class="input" type="button" value="CALCULAR">  
+                            </select>
+                        </p>
+                       
+           
+                </div>
+       
+</fieldset>
+</center>
+<center>
+<fieldset class="form" id="vent3" style="box-shadow: 5px 3px 8px ;">
+    
+        <br>
+        <H2>Quincena</H2><div id="Cerrar3"><a href="javascript:cerrar3()"> <i class="far fa-times-circle" style="color: black; top: 3px;margin-left:90%; font-size: 30px;" ></i></a></div>
+        
+        <div style="text-align: left;">
+        <input class="pay" type="text" value="Código" style="background-color: #AAAAAA;"readonly>
+        <input class="pay" type="text" value="Cantidad" style="background-color: #AAAAAA;"readonly>
+        <input class="concept" type="text" value="Concepto" style="background-color: #AAAAAA;"readonly>
+        <input class="pay" type="text" value="Valor" style="background-color: #AAAAAA;"readonly>
+        <input class="pay" type="text" value="Total" style="background-color: #AAAAAA;"readonly>
+        <input class="concept" type="text" value="Total HABERES" style="background-color: #AAAAAA;"readonly>
+        
+        <form>
+        
+        
+                <p>
+                    <select class="pay" style="width: 95px;">  
+                    <option value="0">...</option>
+                    <option value="1">LIC</option>
+                    
+                  </select> 
+                 
+                    <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="multiplicador2" onchange="multiplicar();">
+                    
+                        <select class="concept" style="width: 190px;">
+                        <option value="0">...</option>
+                        <option value="1">Licencia</option>
+                        
+                      </select>
+                    
+                    <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                    <input class="pay" type="number" min="0" value="0" style="background: white" id="resultado"> 
+                    <input class="concept" type="number" min="0" value="0" style="background: white" id="resultado"> 
+                    <input class="input" type="button" value="CALCULAR">    
+                </select>
+                </p>
+                <p>
+                    <select class="pay" style="width: 95px;">  
+                        <option value="0">...</option>
+                        <option value="1">AP</option>
+                        <option value="2">IR</option>
+                        <option value="3">SG</option>
+                       
+                        
+                      </select> 
+                     
+                        <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                        
+                            <select class="concept" style="width: 190px;">
+                            <option value="0">...</option>
+                            <option value="1">Aporte Jubilatorio</option>
+                            <option value="2">IRPF</option>
+                            <option value="3">SiInSa</option>
+                        
+                             
+                          </select>
+                        
+                        <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                        <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                        <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                        <input class="input" type="button" value="CALCULAR">  
+                        </select>
+                    </p>
+                    <p>
+                        <select class="pay" style="width: 95px;">  
+                            <option value="0">...</option>
+                            <option value="1">SB</option>
+                            <option value="2">HC</option>
+                            <option value="3">HE</option>
+                            <option value="4">PRES</option>
+                            
+                            
+                          </select> 
+                         
+                            <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                            
+                                <select class="concept" style="width: 190px;">
+                                <option value="0">...</option>
+                                <option value="1">Sueldo Basico</option>
+                                <option value="2">Horas Comunes</option>
+                                <option value="3">Horas Extra</option>
+                                <option value="4">Presentismo</option>
+                                <option value="5">Licencia</option>
+                                
+                              </select>
+                            
+                            <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                            <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                            <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                            <input class="input" type="button" value="CALCULAR">  
+                            </select>
+                        </p>
+               
+                        <p>
+                            <select class="pay" style="width: 95px;">  
+                                <option value="0">...</option>
+                                <option value="1">SB</option>
+                                <option value="2">HC</option>
+                                <option value="3">HE</option>
+                                <option value="4">PRES</option>
+                                
+                                
+                              </select> 
+                             
+                                <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                                
+                                    <select class="concept" style="width: 190px;">
+                                    <option value="0">...</option>
+                                    <option value="1">Sueldo Basico</option>
+                                    <option value="2">Horas Comunes</option>
+                                    <option value="3">Horas Extra</option>
+                                    <option value="4">Presentismo</option>
+                                    <option value="5">Licencia</option>
+                                      
+                                  </select>
+                                
+                                <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                                <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                                <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                                <input class="input" type="button" value="CALCULAR">  
+                                </select>
+                            </p>
+                           
+               
+                    </div>
+           
+</fieldset>
+</center>
+<center>
+<fieldset class="form" id="vent4" style="box-shadow: 5px 3px 8px ;">
+        
+            <br>
+            <H2>2da Quincena</H2><div id="Cerrar4"><a href="javascript:cerrar4()">  <i class="far fa-times-circle" style="color: black; top: 3px;margin-left:90%; font-size: 30px;" ></i></a></div>
+            
+            <div style="text-align: left;">
+            <input class="pay" type="text" value="Código" style="background-color: #AAAAAA;"readonly>
+            <input class="pay" type="text" value="Cantidad" style="background-color: #AAAAAA;"readonly>
+            <input class="concept" type="text" value="Concepto" style="background-color: #AAAAAA;"readonly>
+            <input class="pay" type="text" value="Valor" style="background-color: #AAAAAA;"readonly>
+            <input class="pay" type="text" value="Total" style="background-color: #AAAAAA;"readonly>
+            <input class="concept" type="text" value="Total HABERES" style="background-color: #AAAAAA;"readonly>
+            
+            <form>
+            
+            
+                    <p>
+                        <select class="pay" style="width: 95px;">  
+                        <option value="0">...</option>
+                        <option value="1">LIC</option>
+                        
+                      </select> 
+                     
+                        <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="multiplicador2" onchange="multiplicar();">
+                        
+                            <select class="concept" style="width: 190px;">
+                            <option value="0">...</option>
+                            <option value="1">Licencia</option>
+                            
+                          </select>
+                        
+                        <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                        <input class="pay" type="number" min="0" value="0" style="background: white" id="resultado"> 
+                        <input class="concept" type="number" min="0" value="0" style="background: white" id="resultado"> 
+                        <input class="input" type="button" value="CALCULAR">    
+                    </select>
+                    </p>
+                    <p>
+                        <select class="pay" style="width: 95px;">  
+                            <option value="0">...</option>
+                            <option value="1">AP</option>
+                            <option value="2">IR</option>
+                            <option value="3">SG</option>
+                           
+                            
+                          </select> 
+                         
+                            <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                            
+                                <select class="concept" style="width: 190px;">
+                                <option value="0">...</option>
+                                <option value="1">Aporte Jubilatorio</option>
+                                <option value="2">IRPF</option>
+                                <option value="3">SiInSa</option>
+                            
+                                 
+                              </select>
+                            
+                            <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                            <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                            <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                            <input class="input" type="button" value="CALCULAR">  
+                            </select>
+                        </p>
+                        <p>
+                            <select class="pay" style="width: 95px;">  
+                                <option value="0">...</option>
+                                <option value="1">SB</option>
+                                <option value="2">HC</option>
+                                <option value="3">HE</option>
+                                <option value="4">PRES</option>
+                                
+                                
+                              </select> 
+                             
+                                <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                                
+                                    <select class="concept" style="width: 190px;">
+                                    <option value="0">...</option>
+                                    <option value="1">Sueldo Basico</option>
+                                    <option value="2">Horas Comunes</option>
+                                    <option value="3">Horas Extra</option>
+                                    <option value="4">Presentismo</option>
+                                    <option value="5">Licencia</option>
+                                    
+                                  </select>
+                                
+                                <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                                <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                                <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                                <input class="input" type="button" value="CALCULAR">  
+                                </select>
+                            </p>
+                   
+                            <p>
+                                <select class="pay" style="width: 95px;">  
+                                    <option value="0">...</option>
+                                    <option value="1">SB</option>
+                                    <option value="2">HC</option>
+                                    <option value="3">HE</option>
+                                    <option value="4">PRES</option>
+                                    
+                                    
+                                  </select> 
+                                 
+                                    <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                                    
+                                        <select class="concept" style="width: 190px;">
+                                        <option value="0">...</option>
+                                        <option value="1">Sueldo Basico</option>
+                                        <option value="2">Horas Comunes</option>
+                                        <option value="3">Horas Extra</option>
+                                        <option value="4">Presentismo</option>
+                                        <option value="5">Licencia</option>
+                                          
+                                      </select>
+                                    
+                                    <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                                    <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                                    <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                                    <input class="input" type="button" value="CALCULAR">  
+                                    </select>
+                                </p>
+                               
+                   
+                        </div>
+               
+</fieldset>
+</center>
+<center>
+<fieldset class="form" id="vent5" style="box-shadow: 5px 3px 8px ;">
+            
+                <br>
+                <H2>Aguinaldo</H2><div id="Cerrar5"><a href="javascript:cerrar5()">  <i class="far fa-times-circle" style="color: black; top: 3px;margin-left:90%; font-size: 30px;" ></i></a></div>
+                
+                <div style="text-align: left;">
+                <input class="pay" type="text" value="Código" style="background-color: #AAAAAA;"readonly>
+                <input class="pay" type="text" value="Cantidad" style="background-color: #AAAAAA;"readonly>
+                <input class="concept" type="text" value="Concepto" style="background-color: #AAAAAA;"readonly>
+                <input class="pay" type="text" value="Valor" style="background-color: #AAAAAA;"readonly>
+                <input class="pay" type="text" value="Total" style="background-color: #AAAAAA;"readonly>
+                <input class="concept" type="text" value="Total HABERES" style="background-color: #AAAAAA;"readonly>
+                
+                <form>
+                
+                
+                        <p>
+                            <select class="pay" style="width: 95px;">  
+                            <option value="0">...</option>
+                            <option value="1">LIC</option>
+                            
+                          </select> 
+                         
+                            <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="multiplicador2" onchange="multiplicar();">
+                            
+                                <select class="concept" style="width: 190px;">
+                                <option value="0">...</option>
+                                <option value="1">Licencia</option>
+                                
+                              </select>
+                            
+                            <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                            <input class="pay" type="number" min="0" value="0" style="background: white" id="resultado"> 
+                            <input class="concept" type="number" min="0" value="0" style="background: white" id="resultado"> 
+                            <input class="input" type="button" value="CALCULAR">    
+                        </select>
+                        </p>
+                        <p>
+                            <select class="pay" style="width: 95px;">  
+                                <option value="0">...</option>
+                                <option value="1">AP</option>
+                                <option value="2">IR</option>
+                                <option value="3">SG</option>
+                               
+                                
+                              </select> 
+                             
+                                <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                                
+                                    <select class="concept" style="width: 190px;">
+                                    <option value="0">...</option>
+                                    <option value="1">Aporte Jubilatorio</option>
+                                    <option value="2">IRPF</option>
+                                    <option value="3">SiInSa</option>
+                                
+                                     
+                                  </select>
+                                
+                                <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                                <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                                <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                                <input class="input" type="button" value="CALCULAR">  
+                                </select>
+                            </p>
+                            <p>
+                                <select class="pay" style="width: 95px;">  
+                                    <option value="0">...</option>
+                                    <option value="1">SB</option>
+                                    <option value="2">HC</option>
+                                    <option value="3">HE</option>
+                                    <option value="4">PRES</option>
+                                    
+                                    
+                                  </select> 
+                                 
+                                    <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                                    
+                                        <select class="concept" style="width: 190px;">
+                                        <option value="0">...</option>
+                                        <option value="1">Sueldo Basico</option>
+                                        <option value="2">Horas Comunes</option>
+                                        <option value="3">Horas Extra</option>
+                                        <option value="4">Presentismo</option>
+                                        <option value="5">Licencia</option>
+                                        
+                                      </select>
+                                    
+                                    <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                                    <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                                    <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                                    <input class="input" type="button" value="CALCULAR">  
+                                    </select>
+                                </p>
+                       
+                                <p>
+                                    <select class="pay" style="width: 95px;">  
+                                        <option value="0">...</option>
+                                        <option value="1">SB</option>
+                                        <option value="2">HC</option>
+                                        <option value="3">HE</option>
+                                        <option value="4">PRES</option>
+                                        
+                                        
+                                      </select> 
+                                     
+                                        <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                                        
+                                            <select class="concept" style="width: 190px;">
+                                            <option value="0">...</option>
+                                            <option value="1">Sueldo Basico</option>
+                                            <option value="2">Horas Comunes</option>
+                                            <option value="3">Horas Extra</option>
+                                            <option value="4">Presentismo</option>
+                                            <option value="5">Licencia</option>
+                                              
+                                          </select>
+                                        
+                                        <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                                        <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                                        <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                                        <input class="input" type="button" value="CALCULAR">  
+                                        </select>
+                                    </p>
+                                   
+                       
+                            </div>
+                   
+</fieldset>
+</center>
+<center>
+<fieldset class="form" id="vent6" style="box-shadow: 5px 3px 8px ;">
+                
+                    <br>
+                    <H2>Reliquidaciones</H2><div id="Cerrar6"><a href="javascript:cerrar6()">  <i class="far fa-times-circle" style="color: black; top: 3px;margin-left:90%; font-size: 30px;" ></i></a></div>
+                    
+                    <div style="text-align: left;">
+                    <input class="pay" type="text" value="Código" style="background-color: #AAAAAA;"readonly>
+                    <input class="pay" type="text" value="Cantidad" style="background-color: #AAAAAA;"readonly>
+                    <input class="concept" type="text" value="Concepto" style="background-color: #AAAAAA;"readonly>
+                    <input class="pay" type="text" value="Valor" style="background-color: #AAAAAA;"readonly>
+                    <input class="pay" type="text" value="Total" style="background-color: #AAAAAA;"readonly>
+                    <input class="concept" type="text" value="Total HABERES" style="background-color: #AAAAAA;"readonly>
+                    
+                    <form>
+                    
+                    
+                            <p>
+                                <select class="pay" style="width: 95px;">  
+                                <option value="0">...</option>
+                                <option value="1">LIC</option>
+                                
+                              </select> 
+                             
+                                <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="multiplicador2" onchange="multiplicar();">
+                                
+                                    <select class="concept" style="width: 190px;">
+                                    <option value="0">...</option>
+                                    <option value="1">Licencia</option>
+                                    
+                                  </select>
+                                
+                                <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                                <input class="pay" type="number" min="0" value="0" style="background: white" id="resultado"> 
+                                <input class="concept" type="number" min="0" value="0" style="background: white" id="resultado"> 
+                                <input class="input" type="button" value="CALCULAR">    
+                            </select>
+                            </p>
+                            <p>
+                                <select class="pay" style="width: 95px;">  
+                                    <option value="0">...</option>
+                                    <option value="1">AP</option>
+                                    <option value="2">IR</option>
+                                    <option value="3">SG</option>
+                                   
+                                    
+                                  </select> 
+                                 
+                                    <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                                    
+                                        <select class="concept" style="width: 190px;">
+                                        <option value="0">...</option>
+                                        <option value="1">Aporte Jubilatorio</option>
+                                        <option value="2">IRPF</option>
+                                        <option value="3">SiInSa</option>
+                                    
+                                         
+                                      </select>
+                                    
+                                    <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                                    <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                                    <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                                    <input class="input" type="button" value="CALCULAR">  
+                                    </select>
+                                </p>
+                                <p>
+                                    <select class="pay" style="width: 95px;">  
+                                        <option value="0">...</option>
+                                        <option value="1">SB</option>
+                                        <option value="2">HC</option>
+                                        <option value="3">HE</option>
+                                        <option value="4">PRES</option>
+                                        
+                                        
+                                      </select> 
+                                     
+                                        <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                                        
+                                            <select class="concept" style="width: 190px;">
+                                            <option value="0">...</option>
+                                            <option value="1">Sueldo Basico</option>
+                                            <option value="2">Horas Comunes</option>
+                                            <option value="3">Horas Extra</option>
+                                            <option value="4">Presentismo</option>
+                                            <option value="5">Licencia</option>
+                                            
+                                          </select>
+                                        
+                                        <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                                        <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                                        <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                                        <input class="input" type="button" value="CALCULAR">  
+                                        </select>
+                                    </p>
+                           
+                                    <p>
+                                        <select class="pay" style="width: 95px;">  
+                                            <option value="0">...</option>
+                                            <option value="1">SB</option>
+                                            <option value="2">HC</option>
+                                            <option value="3">HE</option>
+                                            <option value="4">PRES</option>
+                                            
+                                            
+                                          </select> 
+                                         
+                                            <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                                            
+                                                <select class="concept" style="width: 190px;">
+                                                <option value="0">...</option>
+                                                <option value="1">Sueldo Basico</option>
+                                                <option value="2">Horas Comunes</option>
+                                                <option value="3">Horas Extra</option>
+                                                <option value="4">Presentismo</option>
+                                                <option value="5">Licencia</option>
+                                                  
+                                              </select>
+                                            
+                                            <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                                            <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                                            <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                                            <input class="input" type="button" value="CALCULAR">  
+                                            </select>
+                                        </p>
+                                       
+                           
+                                </div>
+                       
+</fieldset>
+</center>
+</body>
+
+<script>
+
+function abrir (){ 
+document.getElementById ("vent1").style.display="block";
+}
+function cerrar1 (){
+document.getElementById ("vent1").style.display="none";
+} 
+function abrir2 (){ 
+document.getElementById ("vent2").style.display="block";
+}  
+function cerrar2 (){
+document.getElementById ("vent2").style.display="none";
+}   
+function abrir3 (){ 
+document.getElementById ("vent3").style.display="block";
+}  
+function cerrar3 (){
+document.getElementById ("vent3").style.display="none";
+}   
+function abrir4 (){ 
+document.getElementById ("vent4").style.display="block";
+}  
+function cerrar4 (){
+document.getElementById ("vent4").style.display="none";
+} 
+function abrir5 (){ 
+document.getElementById ("vent5").style.display="block";
+}  
+function cerrar5 (){
+document.getElementById ("vent5").style.display="none";
+} 
+function abrir6 (){ 
+document.getElementById ("vent6").style.display="block";
+}  
+function cerrar6 (){
+document.getElementById ("vent6").style.display="none";
+} 
+</script>
+
+
+  
+</div>
+
+</html>
+
+
+
+       
+       
+
+
