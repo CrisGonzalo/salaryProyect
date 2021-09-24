@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+      <meta charset="utf8"/>
+      <title>Liquidación</title>
+      <meta name="description" content="esta es mi primera web"/>
+      <meta name="author" content="GONZA">
+      <meta name="keywords" content="jornales, liquidos, horas,"/>
+      
+ <style>
+
+* {
+margin: 0;
+padding: 0;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+background-color: #F6DCBF;
+justify-content: center;
+
+
+
+}
+
+header {
+
+font-size: 20px;
+text-align: center;
+padding: 10px 10px;
+margin: 10px 10px;
+background-color:white;
+color: black;
+border-radius: 4px;
+box-shadow: 7px 5px 20px #000;
+}
+
+body {
+
+margin-left: 5px;
+margin-right: 10px;
+margin-top: 5px;
+margin-bottom: 10px;
+
+}
+
+input{
+    
+    padding: 0px;
+    margin: 20px;
+    width: 100px;
+    font-size: 15px;
+    color: white;
+    background-color: #E1701A;
+    border-radius:5px;
+    text-align: center;
+    
+  }
+
+  
+  .input:hover{
+    
+    padding: 0px;
+    margin: 20px;
+    width: 100px;
+    font-size: 15px;
+    color: white;
+    background-color: #FFA900;
+    border-radius:5px;
+    box-shadow: 7px 15px 30px #000;
+
+  }
+
+fieldset{
+
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+.form{
+
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px 10px 10px 10px;
+    align-items: center;
+    padding: 10px;
+    height: auto;
+    width: 150vh;
+    display: grid;
+    align-content: space-between;
+
+}
+
+.class {
+
+background-color: white;
+width: 150px;
+color: black;
+text-align: left; 
+border-radius: 5px;
+
+}
+
+#num {
+
+width: 200px;
+margin: 30px;
+background-color: white;
+
+
+}
+
+.pay {
+
+    width: 80px;
+    margin: 10px;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    align-content: center;
+}
+
+.concept{
+
+    width: 200px;
+    margin: 10px;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    align-content: center;
+
+}
+
+select{
+
+    width: 150px;
+}
+
+.horas {
+
+width: 150px;
+color: black;
+
+}
+
+
+
+ </style>
+</head> 
+    <header>Liquidaciones</header>
+    <br>
+    <div>
+       <th>
+        FECHA: 
+        <input class="class" type="date" style="background-color:white">
+        <div> 
+            <a href=""><input class="input" type="button" value="Crear"></a>
+            <a href=""><input class="input" type="button" value="Modificar"></a>
+            <a href=""><input class="input" type="button" value="Guardar"></a>
+            <a href=""><input class="input" type="reset" value="Borrar"></a>
+      </div>      
+        <Fieldset>
+            <legend>Datos Basicos</legend>
+          <center>
+            <td> Nombre 
+            <select id="Date" style="background-color: white" name="menu" nombre="Empleado">  
+                <option value="0">...</option>
+                <option value="1">Cristian Gonzalez</option>
+                <option value="2">Fernando Gutierrez</option>
+                <option value="3">Pablo</option>
+                <option value="4">Federico</option>
+              </select>
+
+        </td>
+           
+          <td>Categoria
+              <select style="background-color:   white" name="menu" nombre="Categoria">  
+              <option value="0">...</option>
+              <option value="1">Oficial</option>
+              <option value="2">Albañil</option>
+              <option value="3">Maquinista</option>
+              <option value="4">Administrativo/a</option>
+              <option value="5">Vendedor/a</option>
+              <option value="6">Programador/a</option>
+              <option value="7">Auxiliar</option>
+            </select>
+        </td>
+        <td class="class"> Mes
+            <select style="background-color: white" name="menu" nombre="mes">  
+            <option value="0">...</option>
+            <option value="1">Enero</option>
+            <option value="2">Febrero</option>
+            <option value="3">Marzo</option>
+            <option value="4">Abril</option>
+            <option value="5">Mayo</option>
+            <option value="6">Junio</option>
+            <option value="7">Julio</option>
+            <option value="8">Agosto</option>
+            <option value="9">Setiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Novimebre</option>
+            <option value="12">Diciembre</option>
+          </select>
+        </td>
+        Valor Sueldo <input class="class" type="number" id="multiplicando1" placeholder="Sueldo" value=0>  
+       </div>
+       </center>
+    </Fieldset>
+       <br>
+       <table> 
+        
+        <p style="font-size: medium;">
+        <input type="checkbox" name="Mensulaidad" value="1" >Mensulaidad
+        <input type="checkbox" name="Licencia" value="2" >Licencia
+        <input type="checkbox" name="1ra Quincena Liquidada" value="3" >1ra Quincena Liquidada
+        <input type="checkbox" name="2da Quincena Liquidada" value="4" >2da Quincena Liquidada
+        <input type="checkbox" name="Aguinaldo" value="5" >Aguinaldo
+        
+        </p>
+       
+        <br>
+<center>
+<fieldset class="form">
+
+<div style="text-align: left;">
+<input class="pay" type="text" value="Código" style="background-color: #AAAAAA;"readonly>
+<input class="pay" type="text" value="Cantidad" style="background-color: #AAAAAA;"readonly>
+<input class="concept" type="text" value="Concepto" style="background-color: #AAAAAA;"readonly>
+<input class="pay" type="text" value="Valor" style="background-color: #AAAAAA;"readonly>
+<input class="pay" type="text" value="Total" style="background-color: #AAAAAA;"readonly>
+<input class="concept" type="text" value="Total HABERES" style="background-color: #AAAAAA;"readonly>
+
+<form  
+input type="button" value="CALCULAR" onclick="resultado.value=parseInt(num9.value)+parseInt(num16.value)+
+parseInt(num23.value)+parseInt(num30.value)+parseInt(num37.value)+parseInt(num44.value)+parseInt(num51.value)+
+parseInt(num58.value)+parseInt(num65.value)+parseInt(num72.value)+parseInt(num79.value)+parseInt(num86.value)+
+parseInt(num93.value)+parseInt(num100.value)+parseInt(num107.value)+parseInt(num114.value)+parseInt(num121.value)+
+parseInt(num128.value)+parseInt(num135.value)+parseInt(num142.value)+parseInt(num149.value)+parseInt(num156.value)+
+parseInt(num163.value)+parseInt(num170.value)+parseInt(num177.value)+parseInt(num184.value)+parseInt(num191.value)+
+parseInt(num198.value)+parseInt(num205.value)+parseInt(num212.value)+parseInt(num219.value)">
+
+
+        <p>
+            <select class="pay">  
+            <option value="0">...</option>
+            <option value="1">SB</option>
+            <option value="2">HC</option>
+            <option value="3">HE</option>
+            <option value="4">PRES</option>
+            <option value="5">LIC</option>
+            <option value="6">AGU</option>
+          </select> 
+         
+            <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="multiplicador2" onchange="multiplicar();">
+            
+                <select class="concept" style="width: 210px;">
+                <option value="0">...</option>
+                <option value="1">Sueldo Basico</option>
+                <option value="2">Horas Comunes</option>
+                <option value="3">Horas Extra</option>
+                <option value="4">Presentismo</option>
+                <option value="5">Licencia</option>
+                <option value="6">Aguinaldo</option>  
+              </select>
+            
+            <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+            <input class="pay" type="number" min="0" value="0" style="background: white" id="resultado"> 
+            <input class="concept" type="number" min="0" value="0" style="background: white" id="resultado"> 
+            <input class="input" type="button" value="CALCULAR">    
+        </select>
+        </p>
+        <p>
+            <select class="pay">  
+                <option value="0">...</option>
+                <option value="1">SB</option>
+                <option value="2">HC</option>
+                <option value="3">HE</option>
+                <option value="4">PRES</option>
+                <option value="5">LIC</option>
+                <option value="6">AGU</option>
+              </select> 
+             
+                <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                
+                    <select class="concept" style="width: 210px;">
+                    <option value="0">...</option>
+                    <option value="1">Sueldo Basico</option>
+                    <option value="2">Horas Comunes</option>
+                    <option value="3">Horas Extra</option>
+                    <option value="4">Presentismo</option>
+                    <option value="5">Licencia</optio  n>
+                    <option value="6">Aguinaldo</option>  
+                  </select>
+                
+                <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                <input class="input" type="button" value="CALCULAR">  
+                </select>
+            </p>
+            <p>
+                <select class="pay">  
+                    <option value="0">...</option>
+                    <option value="1">SB</option>
+                    <option value="2">HC</option>
+                    <option value="3">HE</option>
+                    <option value="4">PRES</option>
+                    <option value="5">LIC</option>
+                    <option value="6">AGU</option>
+                  </select> 
+                 
+                    <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                    
+                        <select class="concept" style="width: 210px;">
+                        <option value="0">...</option>
+                        <option value="1">Sueldo Basico</option>
+                        <option value="2">Horas Comunes</option>
+                        <option value="3">Horas Extra</option>
+                        <option value="4">Presentismo</option>
+                        <option value="5">Licencia</optio  n>
+                        <option value="6">Aguinaldo</option>  
+                      </select>
+                    
+                    <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                    <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                    <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                    <input class="input" type="button" value="CALCULAR">  
+                    </select>
+                </p>
+       
+                <p>
+                    <select class="pay">  
+                        <option value="0">...</option>
+                        <option value="1">SB</option>
+                        <option value="2">HC</option>
+                        <option value="3">HE</option>
+                        <option value="4">PRES</option>
+                        <option value="5">LIC</option>
+                        <option value="6">AGU</option>
+                      </select> 
+                     
+                        <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                        
+                            <select class="concept" style="width: 210px;">
+                            <option value="0">...</option>
+                            <option value="1">Sueldo Basico</option>
+                            <option value="2">Horas Comunes</option>
+                            <option value="3">Horas Extra</option>
+                            <option value="4">Presentismo</option>
+                            <option value="5">Licencia</optio  n>
+                            <option value="6">Aguinaldo</option>  
+                          </select>
+                        
+                        <input class="pay" type="number" min="0" value="0" style="background: white" id="num11"> 
+                        <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                        <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                        <input class="input" type="button" value="CALCULAR">  
+                        </select>
+                    </p>
+                    <p>
+                        <select class="pay">  
+                            <option value="0">...</option>
+                            <option value="1">SB</option>
+                            <option value="2">HC</option>
+                            <option value="3">HE</option>
+                            <option value="4">PRES</option>
+                            <option value="5">LIC</option>
+                            <option value="6">AGU</option>
+                          </select> 
+                         
+                            <input class="pay" type="number" min="0" value="0" style="background-color: white;" id="num9">
+                            
+                                <select class="concept" style="width: 210px;">
+                                <option value="0">...</option>
+                                <option value="1">Sueldo Basico</option>
+                                <option value="2">Horas Comunes</option>
+                                <option value="3">Horas Extra</option>
+                                <option value="4">Presentismo</option>
+                                <option value="5">Licencia</option>
+                                <option value="6">Aguinaldo</option>  
+                                 
+                              </select>
+                            
+                            <input class="pay" type="number" min="0" value="0" style="background: white" id="resultado"> 
+                            <input class="pay" type="number" min="0" value="0" style="background: white" id="num12"> 
+                            <input class="concept" type="number" min="0" value="0" style="background: white" id="num13"> 
+                            <input class="input" type="button" value="CALCULAR">  
+                            </select>
+                        </p>
+       
+            </div>
+   
+       </fieldset>
+    </center>
+       
+    <script>
+       function multiplicar(){
+           m1 = document.getElementById("multiplicando1").value;
+           m2 = document.getElementById("multiplicador2").value;
+           r = m1*m2
+           document.getElementById("resultado").value = r;
+
+           m1 = document.getElementById("multiplicando1").value;
+           m3 = document.getElementById("multiplicador3").value;
+           r = m1*m3*2
+           document.getElementById("resultado1").value = r;
+           
+           m1 = document.getElementById("multiplicando1").value;
+           m4 = document.getElementById("multiplicador4").value;
+           r = m1*m4/2
+           document.getElementById("resultado2").value = r;  
+
+           m1 = document.getElementById("multiplicando1").value;
+           m5 = document.getElementById("multiplicador5").value;
+           r = m1*m5
+           document.getElementById("resultado3").value = r; 
+
+           m1 = document.getElementById("multiplicando1").value;
+           m6 = document.getElementById("multiplicador6").value;
+           r = m1*m6
+           document.getElementById("resultado4").value = r; 
+
+           m1 = document.getElementById("multiplicando1").value;
+           m7 = document.getElementById("multiplicador7").value;
+           r = m1*m7
+           document.getElementById("resultado5").value = r; 
+          
+           }
+    </script>
+
+       </head>
+       <body>
+       <p>
+       <form id="multiplicar">
+        Horas Comunes
+           <div>
+            <input type="text" id="multiplicador2" value=0 onChange="multiplicar();">
+         </div>
+         <input type="text" id="resultado" style="color: red;">
+       </form> 
+       <form id="multiplicar">
+        Horas Extra
+           <div>
+         <input type="text" id="multiplicador3" value=0 onChange="multiplicar();">
+         </div>
+         <input type="text" id="resultado1" style="color: red;">
+       </form> 
+       <form id="multiplicar">
+        Medias Horas
+           <div>
+         <input type="text" id="multiplicador4" value=0 onChange="multiplicar();">
+         </div>
+         <input type="text" id="resultado2" style="color: red;">
+       </form> 
+       <form id="multiplicar">
+        Horas x lluvia
+           <div>
+         <input type="text" id="multiplicador5" value=0 onChange="multiplicar();">
+         </div>
+         <input type="text" id="resultado3" style="color: red;">
+       </form> 
+       <form id="multiplicar">
+        Horas x lluvia (fuera)
+           <div>
+         <input type="text" id="multiplicador6" value=0 onChange="multiplicar();">
+         </div>
+         <input type="text" id="resultado4" style="color: red;">
+       </form> 
+       <form id="multiplicar">
+        Otras Obras
+           <div>
+         <input type="text" id="multiplicador7" value=0 onChange="multiplicar();">
+         </div>
+         <input type="text" id="resultado5" style="color: red;">
+       </form> 
+   
+   
+    </p>
+    </th>
+    </table>
+   
+</div>
+</fieldset>  
+
+
+      
+   
+    
+
+<div>
+    <input type="text" font-size="2px" value="Hs. Comunes"readonly id="hs"> = <output name="resultado" for="num9 num16 num23 num30 num37 num44 num51 num58 num65 num72 num79 num86 num93 num100 num107 num114 num121 num128 num135 num142 num149 num156 num163 num170 num177 num184 num191 num198 num205 num212 num219" style="color: red"></output>
+
+
+<p>
+  <p>
+    <div><form  
+       input type="button" value="CALCULAR" onclick="resultado.value=parseInt(num9.value)+parseInt(num16.value)+
+      parseInt(num23.value)+parseInt(num30.value)+parseInt(num37.value)+parseInt(num44.value)+parseInt(num51.value)+
+      parseInt(num58.value)+parseInt(num65.value)+parseInt(num72.value)+parseInt(num79.value)+parseInt(num86.value)+
+      parseInt(num93.value)+parseInt(num100.value)+parseInt(num107.value)+parseInt(num114.value)+parseInt(num121.value)+
+      parseInt(num128.value)+parseInt(num135.value)+parseInt(num142.value)+parseInt(num149.value)+parseInt(num156.value)+
+      parseInt(num163.value)+parseInt(num170.value)+parseInt(num177.value)+parseInt(num184.value)+parseInt(num191.value)+
+      parseInt(num198.value)+parseInt(num205.value)+parseInt(num212.value)+parseInt(num219.value)">
+   
+    <input type="button" value="CALCULAR" id="button">
+      
+      <input type="text" font-size="2px" value="Hs. Comunes"readonly id="hs"> = <output name="resultado" for="num9 num16 num23 num30 num37 num44 num51 num58 num65 num72 num79 num86 num93 num100 num107 num114 num121 num128 num135 num142 num149 num156 num163 num170 num177 num184 num191 num198 num205 num212 num219" style="color: red"></output>
+
+   </form>
+</p>
+<p>
+   <form> 
+       <input type="button" value="CALCULAR" onclick="resultado.value=parseInt(num10.value)+parseInt(num17.value)+
+      parseInt(num24.value)+parseInt(num31.value)+parseInt(num38.value)+parseInt(num45.value)+parseInt(num52.value)+
+      parseInt(num59.value)+parseInt(num66.value)+parseInt(num73.value)+parseInt(num80.value)+parseInt(num87.value)+
+      parseInt(num94.value)+parseInt(num101.value)+parseInt(num108.value)+parseInt(num115.value)+parseInt(num122.value)+
+      parseInt(num129.value)+parseInt(num136.value)+parseInt(num143.value)+parseInt(num150.value)+parseInt(num157.value)+
+      parseInt(num164.value)+parseInt(num171.value)+parseInt(num178.value)+parseInt(num185.value)+parseInt(num192.value)+
+      parseInt(num199.value)+parseInt(num206.value)+parseInt(num213.value)+parseInt(num220.value)">
+   
+     <input type="text" font-size="2px" value="Hs. Extra"readonly> = <output name="resultado" for="num10 num17 num24 num32 num38 num45 num52 num59 num66 num73 num80 num87 num94 num101 num108 num115 num122 num129 num136 num143 num150 num157 num164 num171 num178 num185 num192 num199 num206 num213 num220" style="color:red"></output>
+   </form>
+</p>
+<p>
+   <form>
+       <input type="button" value="CALCULAR" onclick="resultado.value=parseInt(num11.value)+parseInt(num18.value)+
+      parseInt(num25.value)+parseInt(num32.value)+parseInt(num39.value)+parseInt(num46.value)+parseInt(num53.value)+
+      parseInt(num60.value)+parseInt(num67.value)+parseInt(num74.value)+parseInt(num81.value)+parseInt(num88.value)+
+      parseInt(num95.value)+parseInt(num102.value)+parseInt(num109.value)+parseInt(num116.value)+parseInt(num123.value)+
+      parseInt(num130.value)+parseInt(num137.value)+parseInt(num144.value)+parseInt(num151.value)+parseInt(num158.value)+
+      parseInt(num165.value)+parseInt(num172.value)+parseInt(num179.value)+parseInt(num186.value)+parseInt(num193.value)+
+      parseInt(num200.value)+parseInt(num207.value)+parseInt(num214.value)+parseInt(num221.value)">
+   
+     <input type="text" font-size="2px" value="Medias Horas"readonly> = <output name="resultado" for="num11 num18 num25 num33 num39 num46 num53 num60 num67 num74 num81 num88 num95 num102 num109 num116 num123 num130 num137 num144 num151 num158 num165 num172 num179 num186 num193 num200 num207 num214 num221" style="color: red"></output>
+   </form> 
+</p>
+<p>
+   <form> 
+       <input type="button" value="CALCULAR" onclick="resultado.value=parseInt(num12.value)+parseInt(num19.value)+
+      parseInt(num26.value)+parseInt(num33.value)+parseInt(num40.value)+parseInt(num47.value)+parseInt(num54.value)+
+      parseInt(num61.value)+parseInt(num68.value)+parseInt(num75.value)+parseInt(num82.value)+parseInt(num89.value)+
+      parseInt(num96.value)+parseInt(num103.value)+parseInt(num110.value)+parseInt(num117.value)+parseInt(num124.value)+
+      parseInt(num131.value)+parseInt(num138.value)+parseInt(num145.value)+parseInt(num152.value)+parseInt(num159.value)+
+      parseInt(num166.value)+parseInt(num173.value)+parseInt(num180.value)+parseInt(num187.value)+parseInt(num194.value)+
+      parseInt(num201.value)+parseInt(num208.value)+parseInt(num215.value)+parseInt(num222.value)">
+   
+      <input type="text" font-size="2px" value="Hs. Lluvia en Ob."readonly> = <output name="resultado" for="num12 num19 num26 num34 num40 num47 num54 num61 num68 num75 num82 num89 num96 num103 num110 num117 num124 num131 num138 num145 num152 num159 num166 num173 num180 num187 num194 num201 num208 num215 num222" style="color: red"></output>
+   </form>
+</p>
+   <p>
+   <form>
+       <input type="button" value="CALCULAR" onclick="resultado.value=parseInt(num13.value)+parseInt(num20.value)+
+       parseInt(num27.value)+parseInt(num34.value)+parseInt(num41.value)+parseInt(num48.value)+parseInt(num55.value)+
+       parseInt(num62.value)+parseInt(num69.value)+parseInt(num76.value)+parseInt(num83.value)+parseInt(num90.value)+
+       parseInt(num97.value)+parseInt(num104.value)+parseInt(num111.value)+parseInt(num118.value)+parseInt(num125.value)+
+       parseInt(num132.value)+parseInt(num139.value)+parseInt(num146.value)+parseInt(num153.value)+parseInt(num160.value)+
+       parseInt(num167.value)+parseInt(num174.value)+parseInt(num181.value)+parseInt(num188.value)+parseInt(num195.value)+
+       parseInt(num202.value)+parseInt(num209.value)+parseInt(num216.value)+parseInt(num223.value)">
+   
+       <input type="text" font-size="2px" value="Hs. Lluvia fuera de Ob."readonly> = <output name="resultado" for="num13 num20 num27 num34 num41 num48 num55 num62 num69 num76 num83 num90 num97 num104 num111 num118 num125 num132 num139 num146 num153 num160 num167 num174 num181 num188 num195 num202 num209 num216 num223" style="color: red"></output>
+   
+   </form>
+   </p>
+   <p>
+   <form>
+       <input type="button" value="CALCULAR" onclick="resultado.value=parseInt(num14.value)+parseInt(num21.value)+
+       parseInt(num28.value)+parseInt(num35.value)+parseInt(num42.value)+parseInt(num49.value)+parseInt(num56.value)+parseInt(num63.value)+
+       parseInt(num70.value)+parseInt(num77.value)+parseInt(num84.value)+parseInt(num91.value)+parseInt(num98.value)+parseInt(num105.value)+
+       parseInt(num112.value)+parseInt(num119.value)+parseInt(num126.value)+parseInt(num133.value)+parseInt(num140.value)+parseInt(num147.value)+
+       parseInt(num154.value)+parseInt(num161.value)+parseInt(num168.value)+parseInt(num175.value)+parseInt(num182.value)+parseInt(num189.value)+
+       parseInt(num196.value)+parseInt(num203.value)+parseInt(num210.value)+parseInt(num217.value)+parseInt(num224.value)">
+   
+      <input type="text" font-size="2px" value="Otras Obras" readonly> = <output name="resultado" for="num14 num21 num28 num35 num42 num49 num56 num63 num70 num77 num84 num91 num98 num105 num112 num118 num126 num133 num140 num147 num154 num161 num168 num175 num181 num189 num196 num203 num210 num217 num214" style="color: red"></output>
+    </p>
+   </p>
+
+   <script>
+    function multiplicar(){
+        m1 = document.getElementById("multiplicando1").value;
+        m2 = document.getElementById("multiplicador2").value;
+        r = m1*m2
+        document.getElementById("resultado").value = r;
+
+        m1 = document.getElementById("multiplicando1").value;
+        m3 = document.getElementById("multiplicador3").value;
+        r = m1*m3*2
+        document.getElementById("resultado1").value = r;
+        
+        m1 = document.getElementById("multiplicando1").value;
+        m4 = document.getElementById("multiplicador4").value;
+        r = m1*m4/2
+        document.getElementById("resultado2").value = r;  
+
+        m1 = document.getElementById("multiplicando1").value;
+        m5 = document.getElementById("multiplicador5").value;
+        r = m1*m5
+        document.getElementById("resultado3").value = r; 
+
+        m1 = document.getElementById("multiplicando1").value;
+        m6 = document.getElementById("multiplicador6").value;
+        r = m1*m6
+        document.getElementById("resultado4").value = r; 
+
+        m1 = document.getElementById("multiplicando1").value;
+        m7 = document.getElementById("multiplicador7").value;
+        r = m1*m7
+        document.getElementById("resultado5").value = r; 
+       
+        }
+ </script>
+

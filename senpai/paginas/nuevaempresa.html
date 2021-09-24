@@ -7,6 +7,7 @@
       <meta name="author" content="GONZA">
       <meta name="keywords" content="WAGE"/>
       <script src="https://kit.fontawesome.com/c8dca0a9ee.js" crossorigin="anonymous"></script>
+      <script type="text/javascript"  src="js.js"></script>
 <style>
 
 
@@ -143,7 +144,7 @@ margin: 30px 0px;
   <header> Crear Empresa</header>
   <article style="width: 100%">
         <div> 
-            <a href=""><input class="input" type="submit" value="Guardar"></a>
+            <a href=""><input class="input" type="button" onclick="getData()" value="Guardar"></a>
             <a href=""><input class="input" type="button" value="Modificar"></a>
             <a href=""><input class="input" type="reset" value="Borrar"></a>
             
@@ -180,19 +181,19 @@ margin: 30px 0px;
               </li>
               <li>
                 <label for="name">RUT:</label>
-                <input type="text" id="name" name="Dirección" />
+                <input type="number" id="name" name="Dirección" />
               </li>
               <li>
                 <label for="name">Dirección:</label>
-                <input type="number" id="name" name="Teléfono" />
+                <input type="text" id="name" name="Teléfono" />
               </li>
               <li>
                 <label for="name">Departamento:</label>
-                <input type="number" id="name" name="Celular" />
+                <input type="text" id="name" name="Celular" />
               </li>
               <li>
                 <label for="name">Localidad:</label>
-                <input type="number" id="name" name="Celular" />
+                <input type="text" id="name" name="Celular" />
               </li>
               <li>
                 <label for="name">E-mail:</label>
@@ -212,7 +213,7 @@ margin: 30px 0px;
               </li>
               <li>
                 <label for="name">Actividad de la empresa:</label>
-                <input type="number" id="name" name="Celular" />
+                <input type="text" id="name" name="Celular" />
               </li>
               <li>
                 <label for="name">Inicio en MTSS:</label>
@@ -220,10 +221,10 @@ margin: 30px 0px;
               </li>
               <li>
                 <label for="name">Tipo de Aporte:</label>
-                <input type="number" id="name" name="Celular" />
+                <input type="text" id="name" name="Celular" />
                 <li>
                   <label for="name">Tipo de contribuyente:</label>
-                  <input type="number" id="name" name="Celular" />
+                  <input type="text" id="name" name="Celular" />
                 </li>
               </li>
               </ul>
@@ -371,7 +372,7 @@ margin: 30px 0px;
 <fieldset class="form" id="vent4" style="box-shadow: 5px 3px 8px ;">
       
       <br>
-      <h2>Datos Básicos</h2><div id="cerrar1"><a href="javascript:cerrar1()"> <i class="far fa-times-circle" style="color: black; top: 3px;margin-left:90%; font-size: 30px;" ></i></a></div>
+      <h2>Configuración</h2><div id="cerrar4"><a href="javascript:cerrar4()"> <i class="far fa-times-circle" style="color: black; top: 3px;margin-left:90%; font-size: 30px;" ></i></a></div>
       
                    <ul>
                      <li>
@@ -435,85 +436,6 @@ margin: 30px 0px;
             
 </fieldset>
 </center> 
-
-<script>
-function abrir (){ 
-document.getElementById ("vent1").style.display="block";
-}
-function cerrar1 (){
-document.getElementById ("vent1").style.display="none";
-} 
-function abrir2 (){ 
-document.getElementById ("vent2").style.display="block";
-}
-function cerrar2 (){
-document.getElementById ("vent2").style.display="none";
-} 
-function abrir3 (){ 
-document.getElementById ("vent3").style.display="block";
-}
-function cerrar3 (){
-document.getElementById ("vent3").style.display="none";
-} 
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-      
-      <fieldset>
-               Dirección:
-               <input class="class" type="text" value=""><br>
-               Departamento:<input class="class" type="text" value=""> 
-               <p>
-               Localidad:<input class="class" type="text" value=""> 
-               E-mail:<input class="class" type="email" value="" placeholder="example@gmail.com"> 
-               Contacto<input class="class" type="text">
-               <br>
-               <br>
-                
-               <legend><h4>Actividad de la Empresa</h4></legend>
-               Giro Comercial:<input class="class" type="text" value="">
-               Inicio de Actividad MTSS:<input class="class" type="date" value="">           
-               Tipo de Aporte:<input class="class" type="text" value="">
-               <p>
-               Tipo de Contribuyente:<input class="class" type="text" value="">
-               Número BPS: <input class="class" type="number" value="">
-               <br>
-               <br>
-
-              <legend><h4>Planillas Ingresadas de MTSS</h4></legend>
-              Grupo:<input class="class" type="text" value="">
-              Sub Grupo MTSS:<input class="class" type="text" value="">
-              <br>
-              <br>
-
-              <legend><h4>Banco de Seguros del Estado B.P.S</B></h4></legend>  
-              Número de Carpeta:<input class="class" type="number" value="">
-              Tasa:<input class="class" type="number" value="">
-              Nombre:<input class="class" type="text" value="">
-            </form>
-          </div>   
-      </fieldset>
-    
-          
-    </article>      
+  
 </body>
 </html>
