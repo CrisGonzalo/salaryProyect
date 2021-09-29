@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+     <head>
+       <meta charset="utf8"/>
+      <title> Nueva Empresa </title>
+      <meta name="description" content="esta es mi primera web"/>
+      <meta name="author" content="GONZA">
+      <meta name="keywords" content="WAGE"/>
+      <script src="https://kit.fontawesome.com/c8dca0a9ee.js" crossorigin="anonymous"></script>
+      <script type="text/javascript"  src="js.js"></script>
+<style>
+
+
+* {
+margin: 0;
+padding: 0;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+background-color: #F5EDED;
+justify-content: center;
+
+}
+header {
+
+font-size: 20px;
+text-align: center;
+padding: 10px 10px;
+margin: 10px 10px;
+background-color:#D72323;
+color: #F5EDED;
+border-radius: 4px;
+box-shadow: 5px 3px 8px #000;
+}
+
+fieldset{
+
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px 10px 10px 10px;
+    align-items: center;
+    padding: 10px;
+    height: auto;
+    width: 100vh;
+    display: none ;
+    position: center; 
+    left: 100px;
+    align-content: space-between;
+    
+    
+}
+
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h2{
+
+color: #3E3636;
+}
+
+#tr{
+
+
+background-color: #000000; 
+height: 50px; 
+width: 200px; 
+cursor: pointer;
+
+}
+#tr:hover{
+
+background: #D72323;
+box-shadow:  5px 3px 8px #000000;
+border: ridge;
+transition-duration: 300ms ;
+transition-timing-function:ease-out;
+
+
+}
+
+
+label {
+
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}
+
+
+input{
+    
+    padding: 5px;
+    margin: 10px;
+    width: 100px;
+    font-size: 15px;
+    color: #F5EDED;
+    background-color: #000000;
+    border-radius:5px;
+    text-align: center;
+    cursor: pointer;
+    
+  }
+
+
+  .input:hover{
+    
+    padding: 5px;
+    margin: 10px;
+    width: 100px;
+    font-size: 15px;
+    color: #F5EDED;
+    background-color: #D72323;
+    border-radius:5px;
+    box-shadow:  5px 3px 8px #000000;
+
+  }
+
+  .name  {
+
+    background-color: white;
+    height: 20px;
+    width: 250px;
+    color: #000000;
+    text-align: left;  
+    font-size: 15px;
+    border-radius:5px;
+    padding: 0px;
+    margin: 10px;
+   
+  }
+
+article{
+margin: 30px 0px;
+
+}
+
+
+
+
+
+
+</style>
+
+</head>
+
+<body class="form">
+  <header> Crear Empresa</header>
+  <article style="width: 100%">
+        <div> 
+           <input class="input" type="button" onclick="getData()" value="Guardar">
+            <input class="input" type="button" value="Modificar">
+            <input class="input" type="reset" value="Borrar">
+            
+        </div>
+      </div>
+      </p>
+
+        <br>
+        <center>
+        <p style="font-size: medium;">
+        <a href="javascript:abrir()"><input type="button" name="Datos Basicos" value="Datos Basicos" id="tr"></a>
+        <a href="javascript:abrir2()"><input type="button" name="Planilla y Exoneraciones" value="Planilla y Exoneraciones" id="tr"></a>
+        <a href="javascript:abrir3()"><input type="button" name="Otros Datos" value="Otros Datos" id="tr"></a>
+        <a href="javascript:abrir4()"><input type="button" name="Configuración" value="Configuración" id="tr"></a>
+       
+        </center>
+        <br>
+ </article>                       
+
+<center>
+<fieldset class="form" id="vent1" style="box-shadow: 5px 3px 8px ;">
+
+<br>
+<h2>Datos Básicos</h2><div id="cerrar1"><a href="javascript:cerrar1()"> <i class="far fa-times-circle" style="color: black; top: 3px;margin-left:90%; font-size: 30px;" ></i></a></div>
+
+             <ul>
+               <li>
+                 <label for="name">Nombre Fantasía:</label>
+                 <input class="name" type="text" id="name1" name="nombre" />
+               </li>
+               <li>
+                <label for="name">Razón Social:</label>
+                <input class="name" type="text" id="name2" name="Apellido" />
+              </li>
+              <li>
+                <label for="name">RUT:</label>
+                <input class="name" type="number" id="name3" name="Dirección" />
+              </li>
+              <li>
+                <label for="name">Dirección:</label>
+                <input class="name" type="text" id="name4" name="Teléfono" />
+              </li>
+              <li>
+                <label for="name">Departamento:</label>
+                <input class="name" type="text" id="name5" name="Celular" />
+              </li>
+              <li>
+                <label for="name">Localidad:</label>
+                <input class="name" type="text" id="name6" name="Celular" />
+              </li>
+              <li>
+                <label for="name">E-mail:</label>
+                <input class="name" type="email" id="name7" name="Celular" />
+              </li>
+              <li>
+                <label for="name">Teléfono:</label>
+                <input class="name" type="text" id="name8" name="Departamento" />
+              </li>
+               <li>
+                 <label for="mail">Celular:</label>
+                 <input class="name" type="email" id="name9" name="email" />
+               </li>
+               <li>
+                <label for="name">Contacto:</label>
+                <input class="name" type="text" id="name10" name="Celular" />
+              </li>
+              <li>
+                <label for="name">Actividad de la empresa:</label>
+                <input class="name" type="text" id="name11" name="Celular" />
+              </li>
+              <li>
+                <label for="name">Inicio en MTSS:</label>
+                <input class="name" type="date" id="name12" name="Celular" />
+              </li>
+              <li>
+                <label for="name">Tipo de Aporte:</label>
+                <input class="name" type="text" id="name13" name="Celular" />
+                <li>
+                  <label for="name">Tipo de contribuyente:</label>
+                  <input class="name" type="text" id="name14" name="Celular" />
+                </li>
+              </li>
+              </ul>
+          </div>   
+      
+</fieldset>
+</center> 
+<center>
+<fieldset class="form" id="vent2" style="box-shadow: 5px 3px 8px ;">
+  
+  <br>
+  <h2>Planillas y Exoneraciones</h2><div id="cerrar2"><a href="javascript:cerrar2()"> <i class="far fa-times-circle" style="color: black; top: 3px;margin-left:90%; font-size: 30px;" ></i></a></div>
+  
+               <ul>
+                 <li>
+                   <label for="name">Nombre Fantasía:</label>
+                   <input class="name" type="text" id="name" name="nombre" />
+                 </li>
+                 <li>
+                  <label for="name">Razón Social:</label>
+                  <input class="name" type="text" id="name" name="Apellido" />
+                </li>
+                <li>
+                  <label for="name">RUT:</label>
+                  <input class="name" type="number" id="name" name="Dirección" />
+                </li>
+                <li>
+                  <label for="name">Dirección:</label>
+                  <input class="name" type="text" id="name" name="Teléfono" />
+                </li>
+                <li>
+                  <label for="name">Departamento:</label>
+                  <input class="name" type="text" id="name" name="Celular" />
+                </li>
+                <li>
+                  <label for="name">Localidad:</label>
+                  <input class="name" type="text" id="name" name="Celular" />
+                </li>
+                <li>
+                  <label for="name">E-mail:</label>
+                  <input class="name" type="email" id="name" name="Celular" />
+                </li>
+                </ul>
+            </div>   
+        
+</fieldset>
+</center> 
+<center>
+<fieldset class="form" id="vent3" style="box-shadow: 5px 3px 8px ;">
+    
+    <br>
+    <h2>Otros Datos</h2><div id="cerrar3"><a href="javascript:cerrar3()"> <i class="far fa-times-circle" style="color: black; top: 3px;margin-left:90%; font-size: 30px;" ></i></a></div>
+    
+                 <ul>
+                   <li>
+                    <label for="name">Banco:</label>
+                    <input class="name" type="text" id="name" name="Teléfono" />
+                  </li>
+                  <li>
+                    <label for="name">Sucursal:</label>
+                    <input class="name" type="text" id="name" name="Celular" />
+                  </li>
+                  <li>
+                    <label for="name">Localidad:</label>
+                    <input class="name" type="text" id="name" name="Celular" />
+                  </li>
+                  <li>
+                    <label for="name">E-mail:</label>
+                    <input class="name" type="email" id="name" name="Celular" />
+                  </li>
+                  <li>
+                    <label for="name">Contacto Banco:</label>
+                    <input class="name" type="text" id="name" name="Departamento" />
+                  </li>
+                   <li>
+                     <label for="mail">Teléfono:</label>
+                     <input class="name" type="number" id="name" name="email" />
+                   </li>
+                  </ul>
+              </div>   
+          
+</fieldset>
+</center> 
+<center>
+<fieldset class="form" id="vent4" style="box-shadow: 5px 3px 8px ;">
+      
+      <br>
+      <h2>Configuración</h2><div id="cerrar4"><a href="javascript:cerrar4()"> <i class="far fa-times-circle" style="color: black; top: 3px;margin-left:90%; font-size: 30px;" ></i></a></div>
+      
+                   <ul>
+                    <li>
+                      <label for="name">Actividad de la empresa:</label>
+                      <input class="name" type="text" id="name" name="Celular" />
+                    </li>
+                    <li>
+                      <label for="name">Inicio en MTSS:</label>
+                      <input class="name" type="date" id="name" name="Celular" />
+                    </li>
+                    <li>
+                      <label for="name">Tipo de Aporte:</label>
+                      <input class="name" type="text" id="name" name="Celular" />
+                      <li>
+                        <label for="name">Tipo de contribuyente:</label>
+                        <input class="name" type="text" id="name" name="Celular" />
+                      </li>
+                    </li>
+                    </ul>
+                </div>   
+            
+</fieldset>
+</center> 
+  
+</body>
+</html>
